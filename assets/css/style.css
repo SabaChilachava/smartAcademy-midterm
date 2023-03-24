@@ -107,6 +107,7 @@ label span{
     opacity: .5;
 }
 .section-container-right{
+    min-width: 335px;
     grid-area: banner;
     background-image: url(../img/Rectangle\ 400.svg);
     background-repeat: no-repeat;
@@ -117,6 +118,7 @@ label span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .section-container-right h1{
     color: #000000;
@@ -230,13 +232,13 @@ label span{
     border-radius: 100%;
 }
 .card h2{
-    margin-left: 20px;
+    margin: 0px 20px 0px 20px;
     font-size: 16px;
     font-family: 'Poppins',sans-serif;
     color: #000000;
 }
 .card p{
-    margin: 8px 0px 0px 20px;
+    margin: 8px 20px 0px 20px;
     font-size: 14px;
     font-family: 'Poppins',sans-serif;
     color: #000000;
@@ -313,4 +315,68 @@ footer{
     color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+}
+.search-icon{
+    padding: 20px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0px 4px 25px rgba(194, 194, 194, 0.31);
+    position: relative;
+    
+    display: none;
+}
+.vec2{
+    position: absolute;
+    bottom: 18.5px;
+    right: 18.5px;
+}
+@media (width <= 768px){
+    .search-icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    header ul{
+        display: none;
+    }
+    .sell-something{
+        display: none;
+    }
+    .location-banner{
+        display: grid;
+        width: 100%;
+        gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-areas: "banner" "location";
+    }
+    .section-container-right label{
+        display: none;
+    }
+    .section-container-left{
+        width: 100%;
+    }
+    .section-container-right{
+        width: 88%;
+        height: 435px;
+        text-align: center;
+        margin: auto;
+    }
+    .section-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .card{
+        margin: auto;
+    }
+    .footer-top ul{
+        display: block;
+    }
+    .footer-top p{
+        display: none;
+    }
+    footer{
+        height: 326px;
+    }
 }
