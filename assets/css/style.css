@@ -394,6 +394,9 @@ footer {
   .section-container-right label {
     display: none;
   }
+  .cards-section a:last-child{
+    display: none;
+  }
   .section-container-left {
     width: 100%;
   }
