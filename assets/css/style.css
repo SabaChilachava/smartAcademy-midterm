@@ -226,7 +226,6 @@ label span {
   opacity: 0.5;
 }
 .price {
-  width: 91%;
   display: flex;
   justify-content: flex-end;
   margin-top: 15px;
@@ -336,7 +335,7 @@ footer {
   font-family: 'Poppins', sans-serif;
   font-size: 11px;
   color: #000000;
-  opacity: .8;
+  opacity: 0.8;
 }
 .bottom ul a::after {
   content: "";
