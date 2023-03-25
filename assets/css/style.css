@@ -22,13 +22,13 @@ header ul {
   gap: 48px;
   list-style-type: none;
 }
-ul a {
+header ul a {
   text-decoration: none;
   color: #000000e5;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
-ul a::after {
+header ul a::after {
   content: "";
   display: block;
   margin: auto;
@@ -152,11 +152,6 @@ label span {
   top: 52px;
   right: 15px;
 }
-.vect1 {
-  position: absolute;
-  top: 10px;
-  left: 11px;
-}
 .cards-section {
   width: 85.4%;
   padding-top: 32px;
@@ -173,14 +168,13 @@ label span {
 .section-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, auto);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
 }
 .section-container a {
   text-decoration: none;
 }
 .card {
-  max-width: 395px;
   background: #f8f8f8;
   border-radius: 24px;
   box-shadow: 0px 4px 18px rgba(194, 194, 194, 0.3);
@@ -206,28 +200,17 @@ label span {
   left: 12px;
   top: 12px;
 }
-.bookm1 {
-  width: 7.88px;
-  height: 11.25px;
-  position: absolute;
-  top: 15.5px;
-  left: -0.94px;
-}
-.bookm2 {
-  width: 7.88px;
-  height: 11.25px;
-  position: absolute;
-  top: 13.25px;
-  left: 1.19px;
-}
 .bookmark {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   right: 4px;
-  bottom: -15px;
+  bottom: -20px;
   background-color: #ffffff;
   box-shadow: -2px 4px 20px rgba(109, 109, 109, 0.25);
-  border-radius: 100%;
+  border-radius: 50%;
 }
 .card h2 {
   margin: 0px 20px 0px 20px;
@@ -302,6 +285,19 @@ label span {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
+.footer-top ul a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 1px;
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  transition: all 0.2s;
+}
+.footer-top ul a:hover::after {
+  width: 100%;
+}
 .line {
   border: 1px solid #d0d0d0;
   width: 85.4%;
@@ -319,14 +315,7 @@ label span {
   background: #ffffff;
   border-radius: 50%;
   box-shadow: 0px 4px 25px rgba(194, 194, 194, 0.31);
-  position: relative;
-
   display: none;
-}
-.vec2 {
-  position: absolute;
-  bottom: 18.5px;
-  right: 18.5px;
 }
 footer {
   width: 100%;
@@ -342,14 +331,47 @@ footer {
   border-radius: 24px 24px 0px 0px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25);
 }
+.bottom a{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: #000000;
+  opacity: .8;
+}
+.bottom ul a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 1px;
+  height: 2px;
+  width: 0%;
+  background: #29b24e;
+  transition: all 0.2s;
+}
+.bottom ul a:hover::after {
+  width: 100%;
+}
 .bottom ul {
   width: 100%;
+  margin-top: 14px;
   display: flex;
   justify-content: space-evenly;
   list-style-type: none;
   gap: 35px;
 }
-
+.bottom span{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.sell-frame{
+  padding: 12px;
+  background: #29b24e;
+  border-radius: 12px;
+  margin-top: -28px;
+}
 @media (width <= 768px) {
   .search-icon {
     display: flex;
@@ -379,15 +401,6 @@ footer {
     width: 88%;
     height: 435px;
     text-align: center;
-    margin: auto;
-  }
-  .section-container {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  .card {
     margin: auto;
   }
   .footer-top ul {
